@@ -65,12 +65,9 @@
         text-align: center;
         background-color:black;
         background-image: url(../assets/imgs/setup-gamer-dos-sonhos-capa-pl.jpg);
-        background-image: blur(5px);
         background-repeat: no-repeat;
         background-size: cover;
         height: 600px;
-        filter: blur(0.2px);
-        
     }
 
     .jumbotron h1 {
@@ -81,13 +78,20 @@
     }
 
     #jumbotrondestaque1 {
-    color: black;
+    color: rgb(255, 255, 255);
+    padding-top: 25px;
+
     }
     background-image { 
         filter: blur(10px); 
     }
 
+    .container1 {
+        background-color: rgb(160, 36, 36);
+        height: 100px;
+        border-radius:10px
+    }
 
-    
+
     
     
