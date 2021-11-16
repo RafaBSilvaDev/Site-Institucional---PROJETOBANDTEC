@@ -1,0 +1,93 @@
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    /* HEADER */
+    .header {
+        background-color:rgb(0, 0, 0);
+        height: 100px;
+        padding-top: 10px;
+        border-bottom: 3px solid rgb(44, 44, 44);
+    }
+
+    ul {
+        color: white;
+        list-style: none;
+    }
+
+    .titulo {
+        color: rgb(255, 255, 255);
+        float: left;
+    }
+
+    .navbar {
+        float: right;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .navbar li {
+        float: left;
+        margin-right: 30px;
+        margin-top: 20px;
+      
+    }
+
+    span {
+        color:rgb(199, 15, 15) ;
+    }
+
+    .destaque {
+    color:rgb(199, 15, 15) ;
+    }
+
+    .container {
+        width: 75%;
+        height: 50%;
+        margin: auto;
+    }
+
+    #logo1 {
+        float: left;
+        height:90px;
+        margin-bottom: 20px;
+    }
+
+    #jumbotrondestaque {
+        color:rgb(255, 255, 255);
+    }
+
+    /* BANNER */
+
+    .jumbotron {
+        text-align: center;
+        background-color:black;
+        background-image: url(../assets/imgs/setup-gamer-dos-sonhos-capa-pl.jpg);
+        background-image: blur(5px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        filter: blur(0.2px);
+        
+    }
+
+    .jumbotron h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 50px;
+        padding:100px;
+    }
+
+    #jumbotrondestaque1 {
+    color: black;
+    }
+    background-image { 
+        filter: blur(10px); 
+    }
+
+
+    
+    
+    
