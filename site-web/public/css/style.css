@@ -9,7 +9,7 @@
         background-color:rgb(0, 0, 0);
         height: 100px;
         padding-top: 10px;
-        border-bottom: 3px solid rgb(44, 44, 44);
+        border-bottom: 6px solid rgb(44, 44, 44);
     }
 
     ul {
@@ -90,6 +90,12 @@
         background-color: rgb(160, 36, 36);
         height: 100px;
         border-radius:10px
+    }
+
+    .navbar a {
+        cursor: pointer;
+        color: rgb(160, 36, 36);
+        font-style: none;
     }
 
 
