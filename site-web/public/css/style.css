@@ -15,6 +15,9 @@
         background-color: gray;
         opacity: 0.8;
     }
+    html {
+        scroll-behavior: smooth;
+    }
     /* HEADER */
     .header {
         background-color:white;
@@ -75,6 +78,7 @@
         margin: auto;
     }
 
+
     #logo1 {
         float: left;
         height:90px;
@@ -91,6 +95,8 @@
     #jumbotrondestaque {
         color:rgb(255, 255, 255);
     }
+
+   
 
    nav a{
        font-size: 15px;
@@ -169,7 +175,7 @@
         background-image: url(../assets/imgs/setup-gamer-dos-sonhos-capa-pl.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 95vh;
+        height: 100vh;
     }
 
     .jumbotron h1 {
@@ -185,38 +191,97 @@
         }
     #jumbotrondestaque1 {
     color: rgb(255, 255, 255);
-    padding-top: 25px;
+    padding-top: 20px;
 
     }
 
     .container1 {
         background-color: rgb(160, 36, 36);
         height: 100px;
+        width: 1000px;
         border-radius:10px
     }
      /*SOBRE*/
 
     .Sobre {
         background-color: rgb(0, 0, 0);
-        height: 700px;
+        height: 90vh;
         text-align: center;
     }
 
-    #imagemsobre {
+        #imagemsobre {
         height: 500px;
-        margin-right: 700px;
-        margin-top: 150px;
+        margin-top: 50px;
         transition: all .5 ease 0s;
-    }
-
-    #texto1 {
         float: left;
-        color: white;
-        margin-left: 500px;
+        margin-bottom: 200px;
+        border-radius: 8px;
+        box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.1);
     }
 
-    
+    .texto1 {
+        color: white;
+        width: 520px;
+        height: 600px;
+        float: left;
+        margin-left: 50px;    
+        background-color: rgb(160, 36, 36);
+        border-radius:12px;
+        margin-top: 60px;
 
+    }
 
+    .imagem {
+        width: 500px;
+        height: 600px;
+        float: left; 
+        border-radius: 20px;
+        margin-top: 50px;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: all .5s ease 0s;
+    }
+
+    .imagem:hover {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        transition: all .5s ease 0s;
+    }
+  
+    .textoa {
+        opacity: 0.5;
+        transition: all .5s ease 0s;
+        padding-top: 150px;
+    }
+
+    .textoa:hover {
+        opacity: 1;
+        transition: all .5s ease 0s;
+    }
+
+    .Quemsomos {
+        margin-top: 50px;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: all .5s ease 0s;
+
+     
+    }
+
+    .Quemsomos:hover {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        transition: all .5s ease 0s;
+
+    }
+   .Quemsomos1 {
+       margin-top:50px;
+   }
+
+ 
     
     
