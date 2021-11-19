@@ -340,15 +340,8 @@
     float: left;
     background-repeat: no-repeat;
    }
- 
-
-  *,::before, ::after{
-      box-sizing: border-box;
-
-  }
+   
   
-
-
   .l-form {
       display: flex;
       align-items: center;
@@ -359,6 +352,7 @@
   .form-title {
       font-weight: 400;
       margin-bottom: 3rem;
+
   }
   .form_div {
       position: relative;
@@ -402,7 +396,6 @@
       padding: .75rem 2rem;
       outline: none;
       border: none;
-      background-color: var(--first-color);
       color: white;
       font-size: var(--normal-font-size);
       border-radius: .5rem;
@@ -421,7 +414,7 @@
   .form_input:focus + .form_label {
       top: -1rem;
       left: .3rem;
-      color: var(--first-color);
+      color: rgb(160, 36, 36);
       font-weight: 500;
       z-index: 10;
   }
