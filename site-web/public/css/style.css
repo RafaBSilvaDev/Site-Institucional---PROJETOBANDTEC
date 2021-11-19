@@ -340,25 +340,13 @@
     float: left;
     background-repeat: no-repeat;
    }
-   
-  :root {
-      --first-color: rgb(160, 36, 36);;
-      --input-color: #80868B;
-      --border-color: #DADCE0;
-      --normal-font-size: 1rem;
-      --small-font-size: .75rem;
-  }
+ 
 
   *,::before, ::after{
       box-sizing: border-box;
 
   }
   
-  body {
-      margin: 0;
-      padding: 0;
-      font-size: var(--normal-font-size);
-  }
 
 
   .l-form {
@@ -367,16 +355,10 @@
       height: 100vh;
       
   }
-  .form {
-      width: 360px;
-      padding: 4rem 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(92, 99, 105, .2)
-  }
+
   .form-title {
       font-weight: 400;
       margin-bottom: 3rem;
-
   }
   .form_div {
       position: relative;
@@ -390,13 +372,13 @@
       width: 70%;
       height: 80%;
       font-size: var(--small-font-size);
-      border: 1px solid var(--border-color);
+      border: 1px solid black;
       border-radius: .5rem;
       outline: none;
       background: none;
       z-index: 1;
-      margin-top: 300px;
-      margin-left: 50px;
+      margin-top: 250px;
+      margin-left: 70px;
   }
 
   .form_label {
@@ -409,8 +391,8 @@
       font-size: 9px;
       transition: .3s;
       color: gray;
-      margin-top: 300px;
-      margin-left: 50px;
+      margin-top: 250px;
+      margin-left: 70px;
 
   }
 
@@ -426,7 +408,9 @@
       border-radius: .5rem;
       cursor: pointer;
       transition: 3s;
-      margin-top: 50px;
+      margin-top: 300px;
+      margin-right: 190px;
+      background-color: rgb(160, 36, 36);
 
   }
 
@@ -447,4 +431,54 @@
       height: 650px;
       width: 450px;
       border-radius: 8px;
+      margin-left: 50px;
   }
+
+  .logologin {
+    height: 50px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 200px;
+    
+}
+
+.crieumaconta {
+    margin-left: 60px;    
+}
+
+.fazerlogin {
+    float: left;
+    margin-top: 90px;
+    margin-left: 180px;
+    height: 2px;
+    font-size: 20px;
+}
+
+.corcadastro {
+    color: rgb(177, 171, 171);
+    margin-left: 68px;
+    width: 100px;
+    margin-top: 900px;
+    text-decoration: none;
+    transition: all .5s ease 0s;
+    z-index: -1;
+}
+.corcadastro1 {
+    color: rgb(177, 171, 171);
+    margin-left: 110px;
+    margin-top: 100px;
+    transition: all .5s ease 0s;
+    z-index: -1;
+
+}
+
+
+.corcadastro1:hover {
+   color: red;
+    transition: all .5s ease 0s;
+}
+
+.corcadastro:hover {
+    color: red;
+    transition: all .5s ease 0s;
+}
