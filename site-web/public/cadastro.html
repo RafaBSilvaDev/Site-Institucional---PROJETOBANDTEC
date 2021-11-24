@@ -16,22 +16,22 @@
                         <a href="../public/index.html"><img src="./assets/imgs/valorant-logo-1.png" alt="" class="logologin"> </a>
                         <div class="fazercadastro"><b>CADASTRO</b></div>
                         <div class="form_div">
-                    <input type="text" class="nome_input" placeholder=" ">
+                    <input type="text" class="nome_input" id="nome_input" placeholder=" ">
                     <label for="" class="label_nome">Nome</label>
                 </div>
                 <div class="form_div">
-                    <input type="text" class="email_input" placeholder=" ">
+                    <input type="text" class="email_input" id="email_input" placeholder=" ">
                     <label for="" class="label_email">Email</label>
                 </div>
                 <div class="form_div">
-                    <input type="password" class="senha_input" placeholder=" ">
+                    <input type="password" class="senha_input" id="senha_input" placeholder=" ">
                     <label for="" class="label_senha">Senha</label>
                 </div>
                 <div class="form_div">
-                    <input type="password" class="confirmacao_senha_input" placeholder=" ">
+                    <input type="password" class="confirmacao_senha_input" id="confirmacao_senha_input" placeholder=" ">
                     <label for="" class="label_confirmacao_senha">Confirmação de Senha:</label>
                 </div>
-                <button onclick="cadastrar()" class="botaocadastro">></button>
+                <button type="button" onclick="cadastrar()" class="botaocadastro">></button>
                 <br>
             </form>
         </div>
@@ -43,7 +43,6 @@
 <script>
 
     function cadastrar() {
-        aguardar();
 
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
@@ -65,19 +64,17 @@
             if (confirmacaoSenhaVar == "") {
                 console.log('confirmacaoSenha está em branco')
             }
-            finalizarAguardar();
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
             return false;
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
-            finalizarAguardar();
+            
             return false;
         }
 
@@ -98,14 +95,11 @@
             if (resposta.ok) {
                 window.alert("Cadastro realizado com sucesso!");
                 window.location = "login.html";
-                limparFormulario();
-                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
 
         return false;

@@ -16,14 +16,14 @@
                         <a href="../public/index.html"><img src="./assets/imgs/valorant-logo-1.png" alt="" class="logologin"> </a>
                         <div class="fazerlogin"><b>Fazer login</b></div>
                         <div class="form_div">
-                    <input type="text" class="form_input" placeholder=" ">
+                    <input type="text" class="form_input" id="email_input" placeholder=" ">
                     <label for="" class="form_label">Email</label>
                 </div>
                 <div class="form_div">
-                    <input type="password" class="form_input" placeholder=" ">
+                    <input type="password" class="form_input" id="senha_input" placeholder=" ">
                     <label for="" class="form_label">Senha</label>
                 </div>
-                <button onclick="entrar()" class="form_button">></button>
+                <button type="button" onclick="entrar()" class="form_button">></button>
                 <br>
                 <div class="crieumaconta"><a href="../public/cadastro.html" class="corcadastro">Ainda não tem uma conta? <br><span class="corcadastro1">Crie uma aqui</span> </a> 
                     </div>
@@ -39,8 +39,6 @@
 
 <script>
     function entrar() {
-        aguardar();
-
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
@@ -50,13 +48,13 @@
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (emailVar == "" || senhaVar == "") {
             window.alert("Preencha todos os campos para prosseguir!");
-            finalizarAguardar();
+            
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
+            
             return false;
         }
 
