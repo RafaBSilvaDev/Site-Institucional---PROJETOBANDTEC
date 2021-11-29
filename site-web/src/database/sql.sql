@@ -10,3 +10,12 @@ CREATE TABLE usuario (
 );
 
 select * from usuario;
+
+CREATE TABLE quiz (
+idQuiz INT PRIMARY KEY AUTO_INCREMENT,
+qtdAcertos INT,
+fk_usuario INT,
+FOREIGN KEY (fk_usuario) references usuario(id)
+);
+
+select * from quiz;
