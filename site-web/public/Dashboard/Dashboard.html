@@ -8,12 +8,46 @@
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-    
+    <div id="bg"></div>
     <div class="barradash"></div>
+    <div class="box"> 
+        <div id="desempenho">        
+            <a href="#bg" id="desempenho1">Seu desempenho</a>
+        </div>
+    </div>
+   
+   
+    <div class="grafico">
+        <a href="#grafico" id="fechar">x</a>
+        <canvas class="line-chart"></canvas>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    
+        <script>
+            var ctx = document.getElementsByClassName("line-chart")
+            var chartGraph = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+                datasets: [ {
+                    label: 'TAXA DE ACERTOS',
+                    data: [5,10,15,10,5,5,10,5,10,15],
+                    borderWidth: 2,
+                    borderColor: ['lightblue', '#ff6f6f', '#fffc5e'],
+                    backgroundColor: ['lightblue', '#ff6f6f', '#fffc5e']
+                }
+    
+                ]
+                }
+            });
+    
+    
+        </script>
 
 
 
 
+    </div>
 
 
 
