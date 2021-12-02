@@ -60,7 +60,7 @@ function selecionarResposta(botao) {
     botaoComeçar.innerText = 'Recomeçar'
     botaoComeçar.classList.remove('esconder')
     alert ("Você terminou o jogo")
-    data.datasets[0].data.push(perguntas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0))
+    data.datasets[0].data.push(perguntasEmbaralhadas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0))
     chartGraph.update()
 
   }
@@ -68,12 +68,14 @@ function selecionarResposta(botao) {
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
-  if (correct) {
+  console.log('correct', correct == 'true')
+  if (correct == 'true') {
     element.classList.add('correct')
     perguntasEmbaralhadas[perguntaAtual].acertou = 1;
-    sessionStorage.acertou = perguntas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0)
+    sessionStorage.acertou = perguntasEmbaralhadas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0)
   } else {
     element.classList.add('wrong')
+
   }
 }
 
@@ -131,5 +133,56 @@ const perguntas = [
     { text: 'Bola Curva', correct: false },
     { text: 'Olhar voraz', correct: false },
     { text: 'Estopim', correct: false }
-  ]}
+  ]
+},
+{
+  pergunta: 'Qual a skill principal do agente Phoenix?',
+  acertou: 0,
+  respostas: [
+    { text: 'Mãos Quentes', correct: true },
+    { text: 'Labareda', correct: false },
+    { text: 'Renascimento', correct: false },
+    { text: 'Bola Curva', correct: false }
+  ]
+},
+{
+  pergunta: 'Qual mapa possui 3 entrada para os atacantes?',
+  acertou: 0,
+  respostas: [
+    { text: 'Ascent', correct: false },
+    { text: 'Bind', correct: false },
+    { text: 'Haven', correct: true },
+    { text: 'Icebox', correct: false }
+  ]
+},
+{
+  pergunta: 'Qual rifle mata o adversário com apenas um hs?',
+  acertou: 0,
+  respostas: [
+    { text: 'Operator', correct: false },
+    { text: 'Spectre', correct: false },
+    { text: 'Vandal', correct: true },
+    { text: 'Frenzy', correct: false }
+  ]
+},
+{
+  pergunta: 'Qual rifle tem o spray mais fácil de controlar?',
+  acertou: 0,
+  respostas: [
+    { text: 'Phantom', correct: true },
+    { text: 'Vandal', correct: false },
+    { text: 'Marshal', correct: false },
+    { text: 'Guardian', correct: false }
+  ]
+},
+{
+  pergunta: 'Qual o nome da ULT do controlador "Omen"',
+  acertou: 0,
+  respostas: [
+    { text: 'Tormenta de Aço', correct: false },
+    { text: 'Onda Trovejante', correct: false },
+    { text: 'Salto das sombras', correct: true },
+    { text: 'Icebox', correct: false }
+  ]
+},
 ]
