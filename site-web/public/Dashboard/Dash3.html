@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/dashboard.css">
-    <script defer src="../js/scriptquiz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+
+
 </head>
 <body>
     <!-- Barra Esquerda -->
@@ -31,30 +33,9 @@
     <!-- Modal Gráfico -->
     <div class="grafico">
         <a href="#grafico" id="fechar">x</a>
-    
-        <canvas class="line-chart"></canvas>
+        <canvas id="line-chart"></canvas>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
-    
-        <script>
-            var ctx = document.getElementsByClassName("line-chart")
-            var chartGraph = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
-                datasets: [ {
-                    label: 'TAXA DE ACERTOS',
-                    data: [5,10,15,10,5,5,10,5,10,15],
-                    borderWidth: 2,
-                    borderColor: ['lightblue', '#ff6f6f', '#fffc5e'],
-                    backgroundColor: ['lightblue', '#ff6f6f', '#fffc5e']
-                }
-    
-                ]
-                }
-            });
-
-        </script>
           <div class="container">
             <div id="question-container" class="esconder">
               <div id="question">Pergunta</div>
@@ -74,3 +55,31 @@
  
         </body>
         </html>
+        <script src="../js/scriptquiz.js"></script>
+        <script>
+        
+        var ctx = document.getElementById("line-chart");
+       
+
+          data = {    
+              labels: ["Tentativa1",  "Tentativa2", "Tentativa3", "Tentativa4", "Tentativa5", "Tentativa6", "Tentativa7"],
+              datasets: [ 
+                {
+                  label: 'TAXA DE ACERTOS',
+                  data: [5,7,10],
+                  borderWidth: 2,
+                  borderColor: ['lightblue', '#ff6f6f', '#fffc5e'],
+                  backgroundColor: ['lightblue', '#ff6f6f', '#fffc5e']
+                }
+              ]
+          }
+
+         
+
+          var chartGraph = new Chart(ctx, {
+              type: 'bar',
+              data
+          });
+
+          console.log(chartGraph.data)
+        </script>

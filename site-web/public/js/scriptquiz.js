@@ -60,6 +60,8 @@ function selecionarResposta(botao) {
     botaoComeçar.innerText = 'Recomeçar'
     botaoComeçar.classList.remove('esconder')
     alert ("Você terminou o jogo")
+    data.datasets[0].data.push(perguntas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0))
+    chartGraph.update()
 
   }
 }
@@ -68,6 +70,8 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
+    perguntasEmbaralhadas[perguntaAtual].acertou = 1;
+    sessionStorage.acertou = perguntas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0)
   } else {
     element.classList.add('wrong')
   }
@@ -81,6 +85,7 @@ function clearStatusClass(element) {
 const perguntas = [
   {
     pergunta: 'Qual o duelista propício para se esconder e pegar todos por trás ?',
+    acertou: 0,
     respostas: [
       { text: 'Yoru', correct: true },
       { text: 'Phoenix', correct: false },
@@ -90,6 +95,7 @@ const perguntas = [
   },
   {
     pergunta: 'Quem é o melhor professor da SPTECH?',
+    acertou: 0,
     respostas: [
       { text: 'Kaline', correct: true },
       { text: 'Brandão', correct: true },
@@ -99,6 +105,7 @@ const perguntas = [
   },
   {
     pergunta: 'Qual o nome da skill que deixa o chão congelado?',
+    acertou: 0,
     respostas: [
       { text: 'Sentinela', correct: false },
       { text: 'Orbe de lentidão', correct: true },
@@ -108,11 +115,21 @@ const perguntas = [
   },
   {
     pergunta: 'Qual ult permite o jogador a jogar 2 vezes?',
+    acertou: 0,
     respostas: [
       { text: 'Ressureição', correct: true },
       { text: 'Poço de Víbora', correct: false },
       { text: 'Furia do caçador', correct: false },
       { text: 'Renascimento', correct: true }
     ]
-  }
+  },
+  {
+    pergunta: 'Qual o nome da bang com maior efeito a distância?',
+    acertou: 0,
+   respostas: [
+    { text: 'Paranoia', correct: true },
+    { text: 'Bola Curva', correct: false },
+    { text: 'Olhar voraz', correct: false },
+    { text: 'Estopim', correct: false }
+  ]}
 ]
