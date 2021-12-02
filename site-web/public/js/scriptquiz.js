@@ -57,8 +57,10 @@ function selecionarResposta(botao) {
   if (perguntasEmbaralhadas.length > perguntaAtual + 1) {
     proximoBotao.classList.remove('esconder')
   } else {
-    botaoComeçar.innerText = 'Restart'
+    botaoComeçar.innerText = 'Recomeçar'
     botaoComeçar.classList.remove('esconder')
+    alert ("Você terminou o jogo")
+
   }
 }
 
