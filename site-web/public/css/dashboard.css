@@ -16,11 +16,18 @@ body::-webkit-scrollbar-track {
     opacity: 0.8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .barradash {
-    height: 100vh;
+    height: 100%;
     width: 350px;
     background-color: rgb(248, 85, 85);
     float: left;
+    position: fixed;
+    z-index: 0;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
 }
 
 
@@ -47,13 +54,13 @@ body::-webkit-scrollbar-track {
     top: 10px;
     transition: all .3s;
     transition-delay: .3s;
+    position: fixed;
 }
 .grafico {
     height: 100%;
-    width: 90%;
+    width: 100%;
     background-color: white;
     position: absolute;
-    left: 5%;
     top: -800px;
 }
 
@@ -76,22 +83,193 @@ body::-webkit-scrollbar-track {
 }
 
 #desempenho {
-    margin-left: 460px;
-    background-color: rgb(248, 85, 85);
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    margin-top: 100px;
+    background-color: rgb(240, 59, 59);
+    width: 350px;
+    height: 40px;
+    margin-top: 300px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    align-items: center;
 }
-#desempenho1 {
-    top: 100px;
+#secao1 {
+    background-color: rgb(240, 59, 59);
+    width: 350px;
+    height: 40px;
+    margin-top: 5px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    align-items: center;
+}
+#secao2 {
+    background-color: rgb(240, 59, 59);
+    width: 350px;
+    height: 40px;
+    margin-top: 5px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    align-items: center;
+}
+#secao3 {
+    background-color: rgb(240, 59, 59);
+    width: 350px;
+    height: 40px;
+    margin-top: 25px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    align-items: center;
+}
+#desempenho1a {
+    height: 100%;
+    width: 100%;
+    margin-left: 100px;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+}
+#desempenho1b {
+    height: 100%;
+    width: 100%;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+}
+
+#desempenho1c {
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+#desempenho1d {
+    height: 100%;
+    width: 100%;
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+#desempenho1a:hover {
+    opacity: 0.8;
+}
+#desempenho1b:hover {
+    opacity: 0.8;
+}
+#desempenho1c:hover {
+    opacity: 0.8;
+}
+#desempenho1d:hover {
+    opacity: 0.8;
 }
 
 .box {
     float: left;
     background-color: white;
     height: 100vh;
-    width: 73.5vw;
+    width: 100%;
+}
+.logodash {
+    height: 50px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 145px;
+}
+.logodash1 {
+    height: 50px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 80px;
 }
 
+#video1 {
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 700px;
+}
 
+#aula1 {
+    margin-top: 50px;
+    margin-left: 420px;
+    text-decoration: none;
+
+}
+#video2 {
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 700px;
+
+}
+
+#video3 {
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 700px;
+
+}
+#video4 {
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 700px;
+
+}
+#video5 {
+    margin-left: 400px;
+    margin-top: 30px;
+    width: 700px;
+
+}
+
+/* Quiz */
+
+.container {
+    margin-left: 700px;
+    float: left;
+    margin-top: 400px; 
+    width: 400px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    padding: 10px;
+
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: rgb(248, 85, 85);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+.btn:hover {
+    border-color: rgb(0, 0, 0);
+  }
+
+  .btn.correct {
+    background-color: rgb(39, 231, 39);
+    color: black;
+  }
+  
+  .btn.wrong {
+    background-color: red;
+  }
+
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .esconder {
+    display: none;
+  }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script defer src="../js/scriptquiz.js"></script>
+</head>
+<body>
+    <!-- Barra Esquerda -->
+    <div id="bg"></div>
+    <div class="barradash">
+        <a href="#aula1"><img src="../assets/imgs/valorant-logo-1.png" alt="" class="logodash"> </a>
+        <a href="#aula1"><img src="../assets/imgs/Sem Título-2.png" alt="" class="logodash1"> </a>
+        <div id="desempenho">        
+          <h4> <a href="#bg" id="desempenho1a">Seu desempenho</a></h4>
+        </div>
+        <div id="secao1">        
+            <h4> <a href="./Dashboard.html" id="desempenho1b">Seção 1: Aprendendo o básico</a></h4>
+          </div>   
+          <div id="secao2">        
+            <h4> <a href="./Dash2.html" id="desempenho1c">Seção 2: Melhorando seu jogo Taticamente</a></h4>
+            <div id="secao3">        
+                <h4> <a href="" id="desempenho1d">Seção 3: Teste seu conhecimento</a></h4>
+              </div>   
+          </div>           
+    </div>
+
+    <!-- Modal Gráfico -->
+    <div class="grafico">
+        <a href="#grafico" id="fechar">x</a>
+    
+        <canvas class="line-chart"></canvas>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    
+        <script>
+            var ctx = document.getElementsByClassName("line-chart")
+            var chartGraph = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+                datasets: [ {
+                    label: 'TAXA DE ACERTOS',
+                    data: [5,10,15,10,5,5,10,5,10,15],
+                    borderWidth: 2,
+                    borderColor: ['lightblue', '#ff6f6f', '#fffc5e'],
+                    backgroundColor: ['lightblue', '#ff6f6f', '#fffc5e']
+                }
+    
+                ]
+                }
+            });
+
+        </script>
+          <div class="container">
+            <div id="question-container" class="esconder">
+              <div id="question">Pergunta</div>
+              <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Resposta 1</button>
+                <button class="btn">Resposta 2</button>
+                <button class="btn">Resposta 3</button>
+                <button class="btn">Resposta 4</button>
+              </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Começar</button>
+              <button id="next-btn" class="next-btn btn esconder">Próximo</button>
+            </div>
+          </div>
+
+ 
+        </body>
+        </html>
