@@ -4,7 +4,8 @@ const containerPerguntaDisplay = document.getElementById('question-container')
 const elementoPerguntas = document.getElementById('question')
 const botoesRespostas = document.getElementById('answer-buttons')
 
-let perguntasEmbaralhadas, perguntaAtual
+let perguntasEmbaralhadas, perguntaAtual;
+let progresso = 0;
 
 botaoComeçar.addEventListener('click', começarJogo)
 proximoBotao.addEventListener('click', () => {
@@ -50,6 +51,9 @@ function resetar() {
 function selecionarResposta(botao) {
   const selectedButton = botao.target
   const correct = selectedButton.dataset.correct
+  if(correct){
+    progresso++
+  }
   setStatusClass(document.body, correct)
   Array.from(botoesRespostas.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -60,9 +64,9 @@ function selecionarResposta(botao) {
     botaoComeçar.innerText = 'Recomeçar'
     botaoComeçar.classList.remove('esconder')
     alert ("Você terminou o jogo")
-    data.datasets[0].data.push(perguntasEmbaralhadas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0))
+    data.datasets[0].data.push(progresso)
     chartGraph.update()
-
+    progresso = 0
   }
 }
 
@@ -71,8 +75,6 @@ function setStatusClass(element, correct) {
   console.log('correct', correct == 'true')
   if (correct == 'true') {
     element.classList.add('correct')
-    perguntasEmbaralhadas[perguntaAtual].acertou = 1;
-    sessionStorage.acertou = perguntasEmbaralhadas.reduce((acc, valorAtual) => acc + valorAtual.acertou, 0)
   } else {
     element.classList.add('wrong')
 

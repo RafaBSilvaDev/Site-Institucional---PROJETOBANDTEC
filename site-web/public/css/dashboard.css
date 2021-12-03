@@ -57,13 +57,11 @@ html {
     position: fixed;
 }
 .grafico {
-    height: 99%;
-    width: 97%;
+    height: 100%;
+    width: 100%;
     background-color: white;
     position: absolute;
-    left: 1%;
     top: -800px;
-
 }
 
 
@@ -221,9 +219,9 @@ html {
 /* Quiz */
 
 .container {
-    margin-left: 750px;
+    margin-left: 700px;
     float: left;
-    margin-top: 300px; 
+    margin-top: 400px; 
     width: 400px;
     max-width: 80%;
     background-color: white;
